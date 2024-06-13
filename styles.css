@@ -219,3 +219,45 @@ body {
 .slide_left-item.selected {
     background: #c9ffc3;
 }
+
+@media (max-width: 600px) {
+    #minefield {
+        display: grid;
+        grid-template-columns: repeat(10, 30px);
+        gap: 2px;
+    }   
+
+    .cell {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #shop-item {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .slide_left-item {
+        min-width: 100px;
+    }
+
+    
+    .miner-frame {
+        padding: 10px 10px;
+        height: 100%;
+    }
+    
+    body {
+        background: #fff;
+    }
+    
+    .app {
+        flex-grow: 1;
+        height: calc(100% - 135px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
