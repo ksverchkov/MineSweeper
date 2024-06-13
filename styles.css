@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#minefield {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 2px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    border: 1px solid #999;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cell.mine {
+    background-color: red;
+}
+
+.cell.flagged {
+    background-color: #ccc;
+}
+
+.cell.revealed {
+    background-color: #fff;
+    cursor: default;
+}
+
+
+.miner-frame {
+    background: #fff;
+    padding: 20px 20px;
+    border-radius: 33px;
+    max-width: 420px;
+}
+
+.miner-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.miner-title {
+    flex-grow: 1;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.miner-amount {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    background: #F2F2F2;
+    padding: 5px 10px;
+    border-radius: 33px;
+}
+
+.miner-amount > svg {
+    margin-left: 5px;
+}
+
+.footer-menu {
+    display: flex;
+    margin-top: 15px;
+    background: #F2F2F2;
+    border-radius: 50px;
+}
+
+.footer-menu > div {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 60px;
+}
+
+.footer-menu-item.active {
+    background: #70C1FF;
+}
+
+.footer-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+#shop-item {
+    display: none;
+}
+
+#shop-item.active {
+    display: flex;
+}
+
+
+.slide_left {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slide-left {
+    flex-wrap: wrap;
+}
+
+.slide_left-item {
+    width: calc(30% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #F2F2F2;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+
+.slide_left-item-img > img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 5px;
+}
+
+.slide_left-item-title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.was-bought {
+    padding: 10px 15px;
+    border: 1px solid red;
+    color: red;
+}
+
+.slide_left-item-amount {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.slide_left-item-amount > img {
+    margin-left: 5px;
+}
+
+.slide_left-item-btns {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 60px;
+    padding: 0px 0px;
+}
+
+.btn-buy {
+    display: flex;
+    background: #8DCEFF;
+    border-radius: 60px;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.alertText {
+    position: absolute;
+    top: calc(100% / 2 - 50px);
+    background: #000000b3;
+    padding: 15px 20px;
+    /* width: 100%; */
+    color: #fff;
+    text-align: center;
+    max-width: calc(100% / 2 - 75px);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.restartButton {
+    position: absolute;
+    top: calc(100% / 2 + 35px);
+    background: #594ef5;
+    padding: 10px 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chosenItem > svg {
+    width: 20px;
+    position: absolute;
+    top: -82px;
+    margin-left: 36px;
+}
+
+.slide_left-item.selected {
+    background: #c9ffc3;
+}
